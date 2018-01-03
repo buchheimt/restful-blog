@@ -9,3 +9,7 @@ i.icon {
 img {
   height: 300px;
 }
+
+#delete {
+  display: inline;
+}

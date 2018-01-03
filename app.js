@@ -77,5 +77,15 @@ app.put("/blogs/:id", (req, res) => {
   });
 });
 
+app.delete("/blogs/:id", (req, res) => {
+  Blog.findByIdAndRemove(req.params.id, (err) => {
+    if (err) {
+      res.redirect("/blogs");
+    } else {
+      res.redirect("/blogs");
+    }
+  });
+});
+
 app.listen(3000, () => console.log("RESTful blog running on port 3000"));
 
